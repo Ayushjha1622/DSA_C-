@@ -1,3 +1,7 @@
+// it builds the sorted array by single element at a time
+
+// it takes new element and insert it into correct position in the already sorted part of array
+
 #include<iostream>
 using namespace std;
 
