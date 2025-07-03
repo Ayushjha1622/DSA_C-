@@ -37,14 +37,26 @@ void preOrderTraversal(Node* root) {
 }
 
 // Convert to sum tree (non-leaf nodes = sum of left & right subtree values)
-int sumTree(Node* root) {
-    if (root == NULL) return 0;
+// int sumTree(Node* root) {
+//     if (root == NULL) return 0;
 
+//     int leftSum = sumTree(root->left);
+//     int rightSum = sumTree(root->right);
+
+//     root->data += leftSum + rightSum;
+//     return root->data;
+// }
+
+
+int sumTree(Node* root){
+    if(root ==NULL){
+        return 0;
+    }
     int leftSum = sumTree(root->left);
     int rightSum = sumTree(root->right);
-
     root->data += leftSum + rightSum;
     return root->data;
+
 }
 
 int main() {
